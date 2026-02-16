@@ -23,8 +23,8 @@ fi
 echo ">>> Updating System..."
 yum update -y
 
-echo ">>> Installing Dependencies (Python, Nginx, Git, GCC)..."
-yum install -y python3-pip git nginx python3-devel gcc
+echo ">>> Installing Dependencies (Python, Nginx, Git, GCC, Cairo)..."
+yum install -y python3-pip git nginx python3-devel gcc cairo-devel pkgconfig pango-devel libffi-devel
 # Amazon Linux 2023 uses dnf and has python3.
 # Ensure 'tar' is installed for npm
 yum install -y tar gzip
