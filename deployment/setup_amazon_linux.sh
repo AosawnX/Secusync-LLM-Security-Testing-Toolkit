@@ -10,6 +10,16 @@ APP_USER="ec2-user"
 APP_DIR="/home/$APP_USER/secusync"
 REPO_URL="https://github.com/AosawnX/Secusync-LLM-Security-Testing-Toolkit.git"
 
+echo ">>> Checking Swap Space..."
+if [ ! -f /swapfile ]; then
+    echo ">>> Creating 2GB Swap File for T2.micro..."
+    dd if=/dev/zero of=/swapfile bs=128M count=16
+    chmod 600 /swapfile
+    mkswap /swapfile
+    swapon /swapfile
+    echo "/swapfile swap swap defaults 0 0" >> /etc/fstab
+fi
+
 echo ">>> Updating System..."
 yum update -y
 
