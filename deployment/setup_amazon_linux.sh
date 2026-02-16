@@ -13,8 +13,8 @@ REPO_URL="https://github.com/AosawnX/Secusync-LLM-Security-Testing-Toolkit.git"
 echo ">>> Updating System..."
 yum update -y
 
-echo ">>> Installing Dependencies (Python, Nginx, Git)..."
-yum install -y python3-pip git nginx
+echo ">>> Installing Dependencies (Python, Nginx, Git, GCC)..."
+yum install -y python3-pip git nginx python3-devel gcc
 # Amazon Linux 2023 uses dnf and has python3.
 # Ensure 'tar' is installed for npm
 yum install -y tar gzip
