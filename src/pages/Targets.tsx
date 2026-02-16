@@ -13,7 +13,6 @@ interface Target {
 }
 
 export function Targets() {
-    const navigate = useNavigate()
     const [targets, setTargets] = useState<Target[]>([])
     const [loading, setLoading] = useState(true)
     const [showNewTarget, setShowNewTarget] = useState(false)
