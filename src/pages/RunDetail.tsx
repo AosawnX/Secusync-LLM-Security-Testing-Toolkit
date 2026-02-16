@@ -27,7 +27,7 @@ export function RunDetail() {
 
     useEffect(() => {
         // Fetch Target Details
-        fetch(`http://localhost:8000/api/targets/${id}`)
+        fetch(`/api/targets/${id}`)
             .then(res => res.json())
             .then(data => {
                 setTarget(data)
@@ -122,7 +122,7 @@ export function RunDetail() {
                                 <button
                                     onClick={async () => {
                                         if (confirm("Are you sure you want to clear history? Reports will still be available.")) {
-                                            await fetch(`http://localhost:8000/api/runs/clear-history?target_id=${id}`, { method: 'POST' })
+                                            await fetch(`/api/runs/clear-history?target_id=${id}`, { method: 'POST' })
                                             // Refresh
                                             window.location.reload()
                                         }
