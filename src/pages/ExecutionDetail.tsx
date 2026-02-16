@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { ArrowLeft, Play, AlertTriangle, CheckCircle, Terminal, FileText as FileTex, RotateCw, Briefcase, Archive, Clock } from 'lucide-react'
+import { ArrowLeft, AlertTriangle, CheckCircle, Terminal, FileText as FileTex, RotateCw, Briefcase, Archive, Clock } from 'lucide-react'
 
 interface Finding {
     type: string

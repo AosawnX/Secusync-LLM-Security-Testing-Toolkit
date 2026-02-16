@@ -15,6 +15,7 @@ interface Run {
     status: string
     created_at: string
     result_summary: string | null
+    visible_in_history?: boolean
 }
 
 export function RunDetail() {

@@ -1,5 +1,5 @@
 import { Link, Outlet, useLocation } from 'react-router-dom'
-import { LayoutDashboard, PlusCircle, FileText, Shield, Target as TargetIcon } from 'lucide-react'
+import { LayoutDashboard, FileText, Shield, Target as TargetIcon } from 'lucide-react'
 
 export function MainLayout() {
     const location = useLocation()

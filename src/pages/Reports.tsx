@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FileText, Download, CheckCircle, Clock } from 'lucide-react'
+import { FileText, Download, Clock } from 'lucide-react'
 
 interface Run {
     id: string

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Plus, Target as TargetIcon, Cpu, Globe, ArrowRight, ShieldAlert, X, Trash2, Edit2 } from 'lucide-react'
 
 interface Target {
