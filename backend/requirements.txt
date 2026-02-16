@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+requests
+aiofiles
+openai
+python-dotenv
+xhtml2pdf

@@ -1,0 +1,30 @@
+# Backend
+backend/venv/
+backend/__pycache__/
+backend/.env
+backend/runs/
+backend/db.sqlite3
+*.pyc
+
+# Frontend
+node_modules/
+dist/
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# Agent/AI Artifacts
+.gemini/
+.agent/
+task.md
+implementation_plan.md
+walkthrough.md
+fix_template.py
+test_*.py
+debug_*.html
+
+# OS
+.DS_Store
+Thumbs.db

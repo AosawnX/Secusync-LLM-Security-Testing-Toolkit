@@ -1,0 +1,13 @@
+[Unit]
+Description=SecuSync Backend API
+After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/secusync/backend
+ExecStart=/home/ubuntu/secusync/backend/venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
