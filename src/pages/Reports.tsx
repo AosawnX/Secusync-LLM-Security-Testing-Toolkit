@@ -18,7 +18,7 @@ export function Reports() {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        fetch('http://localhost:8000/api/runs/')
+        fetch('/api/runs/')
             .then(res => res.json())
             .then((data: any[]) => {
                 // Filter only completed runs

@@ -33,7 +33,7 @@ export function Targets() {
     }, [])
 
     const fetchTargets = () => {
-        fetch('http://localhost:8000/api/targets/')
+        fetch('/api/targets/')
             .then(res => res.json())
             .then(data => {
                 setTargets(data)

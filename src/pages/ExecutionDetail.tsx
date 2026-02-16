@@ -37,7 +37,7 @@ export function ExecutionDetail() {
             console.log("Fetching run details for:", id)
             try {
                 // Fetch Run Details
-                const res = await fetch(`http://localhost:8000/api/runs/${id}`)
+                const res = await fetch(`/api/runs/${id}`)
                 if (!res.ok) {
                     console.error("Run fetch failed:", res.status)
                     throw new Error("Run not found")
@@ -48,7 +48,7 @@ export function ExecutionDetail() {
                 setLoading(false)
 
                 // Fetch Logs
-                const logsRes = await fetch(`http://localhost:8000/api/runs/${id}/logs`)
+                const logsRes = await fetch(`/api/runs/${id}/logs`)
                 if (logsRes.ok) {
                     const logsData = await logsRes.json()
                     setLogs(logsData)
@@ -57,7 +57,7 @@ export function ExecutionDetail() {
                 // Fetch History (Only if we have target_id from run data)
                 if (data.target_id) {
                     console.log("Fetching history for target:", data.target_id)
-                    const histRes = await fetch(`http://localhost:8000/api/runs/?target_id=${data.target_id}`)
+                    const histRes = await fetch(`/api/runs/?target_id=${data.target_id}`)
                     if (histRes.ok) {
                         const histData = await histRes.json()
                         console.log("History received:", histData.length, "items")

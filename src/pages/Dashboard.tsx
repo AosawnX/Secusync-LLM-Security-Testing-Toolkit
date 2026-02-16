@@ -25,8 +25,8 @@ export function Dashboard() {
         const fetchData = async () => {
             try {
                 const [targetsRes, runsRes] = await Promise.all([
-                    fetch('http://localhost:8000/api/targets/'),
-                    fetch('http://localhost:8000/api/runs/')
+                    fetch('/api/targets/'),
+                    fetch('/api/runs/')
                 ])
 
                 const targetsData = await targetsRes.json()

@@ -39,7 +39,7 @@ export function RunDetail() {
             })
 
         // Fetch Runs (Mock: fetching ALL runs and filtering. In prod, fetch by target_id)
-        fetch('http://localhost:8000/api/runs/')
+        fetch('/api/runs/')
             .then(res => res.json())
             .then((data: any[]) => {
                 // Filter runs for this target (assuming API returns all runs)
@@ -54,7 +54,7 @@ export function RunDetail() {
         if (!target) return
 
         try {
-            const res = await fetch('http://localhost:8000/api/runs/', {
+            const res = await fetch('/api/runs/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
